@@ -1,0 +1,22 @@
+{
+  "name": "basic-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build:esbuild": "esbuild src/index.ts --bundle --outfile=../wwwroot/index.js",
+    "watch:esbuild": "esbuild --watch src/index.ts --bundle --outfile=../wwwroot/index.js ",
+    "build:tailwind": "tailwindcss build -i src/index.css -o ../wwwroot/index.css",
+    "watch:tailwind": "tailwindcss build -i src/index.css -o ../wwwroot/index.css --watch",
+    "build": "pnpm run '/^build:.*/'",
+    "watch": "pnpm run '/^watch:.*/' "
+  },
+  "devDependencies": {
+    "esbuild": "0.17.14",
+    "tailwindcss": "^3.3.0"
+  },
+  "dependencies": {
+    "flowbite": "^1.6.5",
+    "typescript": "^5.0.4"
+  }
+}

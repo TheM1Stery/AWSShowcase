@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>bootstrap</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer.Hosting" Version="1.6.0" />
+    <PackageReference Include="CoreCLR-NCalc" Version="2.2.113" />
+    <PackageReference Include="FastEndpoints" Version="5.10.0" />
+    <PackageReference Include="FastEndpoints.Generator" Version="5.10.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="FastEndpoints.Swagger" Version="5.10.0" />
+  </ItemGroup>
+
+</Project>

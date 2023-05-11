@@ -1,0 +1,28 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="h-full flex flex-col gap-3 justify-center items-center">
+    <form method="post" asp-page="Index" class="flex flex-col gap-3">
+        <div class="flex flex-col gap-3">
+            <label for="expression" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                Evaluate math expression with AWS Lambda
+            </label>
+            <input type="text" id="expression" asp-for="Expression" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+        <button type="submit" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+            Evaluate
+        </button>
+    </form>
+
+    @if (Model.IsError)
+    {
+        <div class="text-2xl font-semibold text-red-600 dark:text-white">Invalid expression</div>
+    }
+    @if (Model.Answer is not null)
+    {
+        <div class="text-2xl font-semibold text-green-600 dark:text-white">Answer: @Model.Answer</div>
+    }
+</div>

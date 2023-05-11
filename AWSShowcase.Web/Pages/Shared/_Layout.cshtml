@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - AWSShowcase.Web</title>
+    <link rel="stylesheet" href="~/index.css"/>
+</head>
+<body>
+<div class="h-full">
+    <div class="text-2xl font-bold text-orange-500">This app is in a Docker container hosted on AWS App Runner</div>
+    @RenderBody();
+
+</div>
+<script src="~/index.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
